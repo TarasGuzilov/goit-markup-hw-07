@@ -59,21 +59,31 @@ img {
   clip: rect(0 0 0 0);
 }
 
+.page-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* Logotype */
-.header-logo {
+.logo {
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-}
-
-.web {
   color: var(--active-link-color);
 }
 
+.page-header__logo-color {
+  color: #000000;
+}
+
 /* Navigation */
-.main-nav {
+.page-header__main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,11 +99,11 @@ img {
   margin-left: 93px;
 }
 
-.site-nav-item + .site-nav-item {
+.site-nav__item + .site-nav__item {
   margin-left: 50px;
 }
 
-.nav-link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -111,12 +121,12 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.current-link {
+.site-nav__link--active {
   position: relative;
   color: var(--active-link-color);
 }
 
-.current-link::after {
+.site-nav__link--active::after {
   content: "";
   width: 100%;
   height: 4px;
@@ -137,11 +147,11 @@ img {
   margin-left: auto;
 }
 
-.auth-nav-item + .auth-nav-item {
+.auth-nav__item + .auth-nav__item {
   margin-left: 30px;
 }
 
-.auth-nav-item {
+.auth-nav__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,12 +160,12 @@ img {
           align-items: center;
 }
 
-.auth-nav-icon {
+.auth-nav__icon {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.contact-link {
+.auth-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,10 +187,10 @@ img {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover,
-.contact-link:hover,
-.nav-link:focus,
-.contact-link:focus {
+.site-nav__link:hover,
+.auth-nav__link:hover,
+.site-nav__link:focus,
+.auth-nav__link:focus {
   color: var(--active-link-color);
 }
 
@@ -924,12 +934,12 @@ img {
 }
 
 /* Footer */
-footer {
+.page-footer {
   padding: 60px 0;
   background-color: #2f303a;
 }
 
-.footer-content {
+.page-footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -939,32 +949,25 @@ footer {
 }
 
 /* Footer Logo */
-.footer-logo {
+.page-footer__logo {
   display: inline-block;
-  color: #ffffff;
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
 
-/* Address */
-.footer-address {
-  font-style: normal;
+.page-footer__logo-color {
+  color: #ffffff;
 }
 
-.address {
-  display: block;
-  margin-bottom: 0px;
-  color: #ffffff;
+/* Address */
+.page-footer__address {
+  font-style: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  color: #ffffff;
 }
 
-.footer-link {
+.address__link {
   display: block;
   margin-top: 9px;
   color: rgba(255, 255, 255, 0.6);
@@ -976,17 +979,18 @@ footer {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-link:hover,
-.footer-link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--active-link-color);
 }
 
 /* Join section */
-.join-social-web-section {
+.page-footer__join-section {
   margin-left: 70px;
 }
 
-.join-social-web-section > h4 {
+.join-section__title {
+  display: block;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -996,7 +1000,7 @@ footer {
   color: #ffffff;
 }
 
-.join-social-web-list {
+.join-section__social-web-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1005,11 +1009,11 @@ footer {
           justify-content: center;
 }
 
-.join-social-web-item + .join-social-web-item {
+.social-web-list__item + .social-web-list__item {
   margin-left: 10px;
 }
 
-.join-social-web-link {
+.social-web-list__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1031,21 +1035,22 @@ footer {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.join-social-web-icon {
+.social-web-list__icon {
   fill: #ffffff;
 }
 
-.join-social-web-link:hover,
-.join-social-web-link:focus {
+.social-web-list__link:hover,
+.social-web-list__link:focus {
   background-color: var(--active-link-color);
 }
 
 /* Subscribe form */
-.subscribe {
+.page-footer__subscribe-section {
   margin-left: 93px;
 }
 
-.subscribe > h4 {
+.subscribe-section__title {
+  display: block;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
@@ -1055,7 +1060,7 @@ footer {
   color: #ffffff;
 }
 
-.subscribe-form {
+.subscribe-section__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1064,7 +1069,7 @@ footer {
           align-items: center;
 }
 
-.subscribe-mail input {
+.subscribe-section__mail input {
   outline: 0;
   width: 358px;
   height: 50px;
@@ -1082,42 +1087,45 @@ footer {
   background-color: #2f303a;
 }
 
-.subscribe-mail input::-webkit-input-placeholder {
+.subscribe-section__mail input::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-mail input:-ms-input-placeholder {
+.subscribe-section__mail input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-mail input::-ms-input-placeholder {
+.subscribe-section__mail input::-ms-input-placeholder {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-mail input::placeholder {
+.subscribe-section__mail input::placeholder {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
 
-.subscribe-form > button {
+.subscribe-section__button-subscribe {
+  margin-left: 12px;
+}
+
+.button-subscribe {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 12px;
   padding: 10px 28px 10px 29px;
   border: none;
   font-weight: bold;
@@ -1131,7 +1139,7 @@ footer {
   border-radius: 4px;
 }
 
-.icon-send {
+.button-subscribe__icon {
   fill: #ffffff;
   margin-left: 10px;
 }

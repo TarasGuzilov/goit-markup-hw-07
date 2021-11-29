@@ -1,8 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
   padding: 0 15px;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h2,
+h3 {
+  color: #212121;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .logo {
@@ -1105,63 +1160,4 @@
   fill: #ffffff;
   margin-left: 10px;
 }
-
-/* Teg's styles */
-body {
-  font-family: Roboto, sans-serif;
-  background-color: #ffffff;
-}
-
-button {
-  font-family: Roboto, sans-serif;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h2,
-h3 {
-  color: #212121;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-img {
-  display: block;
-}
-
-/* Hidden elements */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-/* Logotype */
-/* Navigation */
-/* Heading */
-/* Features section */
-/* What we are doing section */
-/* Our team section */
-/* Regular customers */
-/* Portfolio section */
-/* Footer */
 /*# sourceMappingURL=main.css.map */

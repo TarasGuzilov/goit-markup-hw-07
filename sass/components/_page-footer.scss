@@ -33,12 +33,12 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.address__link:hover,
-.address__link:focus {
-  color: $active-link-color;
-}
 
+  &:hover,
+  &:focus {
+    color: $active-link-color;
+  }
+}
 /* Join section */
 .page-footer__join-section {
   margin-left: 70px;
@@ -74,13 +74,14 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $active-link-color;
+  }
 }
 .join-section__icon {
   fill: #ffffff;
-}
-.social-web-list__link:hover,
-.social-web-list__link:focus {
-  background-color: $active-link-color;
 }
 
 /* Subscribe form */

@@ -27,15 +27,15 @@
   transition-property: background-color, color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.filter-button:focus,
-.filter-button:hover {
-  background-color: $active-link-color;
-  color: #ffffff;
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
-    0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-}
 
+  &:focus,
+  &:hover {
+    background-color: $active-link-color;
+    color: #ffffff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
+      0px 1px 2px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+  }
+}
 .filter-info-grid {
   display: flex;
   flex-wrap: wrap;
@@ -57,11 +57,12 @@
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.project:hover,
-.project:focus {
-  box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
-    0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16),
+      0px 4px 4px 0px rgba(0, 0, 0, 0.06), 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
 }
 .project__overlay {
   position: relative;
@@ -90,9 +91,10 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.project:hover > .project__overlay > .project__overlay-text {
-  transform: translateY(0%);
+
+  .project:hover > .project__overlay > & {
+    transform: translateY(0%);
+  }
 }
 .project__title {
   padding: 20px 24px;

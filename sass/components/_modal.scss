@@ -56,12 +56,12 @@
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__close-button:hover .modal__close-icon,
-.modal__close-button:focus .modal__close-icon {
-  fill: $active-link-color;
-}
 
+  .modal__close-button:hover &,
+  .modal__close-button:focus & {
+    fill: $active-link-color;
+  }
+}
 .modal__form {
   width: 528px;
   margin-left: auto;
@@ -186,7 +186,7 @@
   background-size: contain;
   background-origin: border-box;
 }
-.modal__form > .modal__button {
+.modal__button {
   padding: 10px 55px 10px 56px;
 
   font-weight: bold;
@@ -203,8 +203,9 @@
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal__form > .modal__button:hover,
-.modal__form > .modal__button:focus {
-  background-color: #188ce8;
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
 }

@@ -2,6 +2,7 @@ li {
   list-style-type: none;
 }
 body {
+  font-family: "Roboto", sans-serif;
   background-color: $background-color;
 }
 button {
@@ -29,4 +30,10 @@ ul {
 }
 img {
   display: block;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding: 0 15px;
 }
